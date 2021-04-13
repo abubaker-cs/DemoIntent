@@ -1,5 +1,7 @@
 package org.abubaker.demointent
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -17,5 +19,22 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
 
+        // Send back some info to the MAIN Activity
+        binding.btnSubmit.setOnClickListener {
+
+            val intent = Intent()
+
+            // Key, Value
+            intent.putExtra(MainActivity.NAME, binding.etName.text.toString())
+
+            // Send data back to the Main Activity
+            setResult(Activity.RESULT_OK, intent)
+
+
+
+        }
+
     }
+
+
 }

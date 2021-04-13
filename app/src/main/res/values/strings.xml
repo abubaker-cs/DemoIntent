@@ -6,4 +6,6 @@
     <string name="btn_submit">SUBMIT</string>
     <string name="et_email">Enter Email</string>
     <string name="et_name">Enter Name</string>
+    <string name="btn_launch_activity_first">Launch First Activity</string>
+    <string name="btn_launch_activity_second">Launch Second Activity</string>
 </resources>
