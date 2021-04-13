@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         private const val SECOND_ACTIVITY_REQUEST_CODE = 2
 
         const val NAME = "name"
+        const val EMAIL = "email"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +52,9 @@ class MainActivity : AppCompatActivity() {
                 // catch the sent data
                 if (data != null) {
                     val name = data.getStringExtra(NAME)
-                    binding.tvSecondActivityResult.text = name
+                    val email = data.getStringExtra(EMAIL)
+                    binding.tvSecondActivityResult.text = "$name => $email"
+
                 }
 
             }

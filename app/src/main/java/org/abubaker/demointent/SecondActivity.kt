@@ -26,12 +26,11 @@ class SecondActivity : AppCompatActivity() {
 
             // Key, Value
             intent.putExtra(MainActivity.NAME, binding.etName.text.toString())
+            intent.putExtra(MainActivity.EMAIL, binding.etEmail.text.toString())
 
             // Send data back to the Main Activity
             setResult(Activity.RESULT_OK, intent)
-
-
-
+         
         }
 
     }
